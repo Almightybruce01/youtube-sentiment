@@ -1,0 +1,9 @@
+# Secrets (DO NOT COMMIT)
+client_secret.json
+token.json
+
+# Environments / caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
