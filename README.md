@@ -1,48 +1,39 @@
-YouTube Sentiment Analyzer
+# YouTube Sentiment Analyzer 🎥📊
 
-Fetch YouTube comments and run sentiment analysis (VADER + TextBlob), producing CSV outputs and charts.
+A Python project that fetches YouTube comments using the **YouTube Data API v3**, runs sentiment analysis (VADER + TextBlob), and produces insights through CSV files and charts.  
 
-What it does
-- Authenticates with Google OAuth (Testing mode)
-- Lists your channel and latest uploads
-- Downloads comments for any video(s)
-- Analyzes sentiment per comment
-- Exports:
-  - youtube_comments.csv
-  - youtube_comments_with_sentiment.csv
-  - yt_sentiment_bar.png (class distribution)
-  - yt_sentiment_trend.png (daily sentiment trend)
+This project demonstrates **API integration, data collection, natural language processing (NLP), and visualization** — all skills valuable for data engineering, data science, and software development roles.  
 
-Tech
-- Python, Google API Client, OAuth
-- YouTube Data API v3
-- NLP: NLTK VADER, TextBlob
-- Pandas/Matplotlib/Seaborn for analysis & charts
+---
 
-Setup
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+## 🚀 Features
+- **OAuth Authentication** with Google (Testing mode)
+- **Channel & Upload Listing** – pulls your latest YouTube uploads
+- **Comment Downloader** – fetches comments for any video(s)
+- **Sentiment Analysis**
+  - VADER (NLTK)
+  - TextBlob polarity
+- **Data Export**
+  - `youtube_comments.csv` – raw comments
+  - `youtube_comments_with_sentiment.csv` – with sentiment scores & labels
+- **Visualizations**
+  - `yt_sentiment_bar.png` – sentiment distribution (positive/neutral/negative)
+  - `yt_sentiment_trend.png` – daily sentiment trend over time
 
-Authenticate
-python3 save_token.py
+---
 
-Usage
-List latest uploads:
-python3 auth_and_list.py
+## 🛠 Tech Stack
+- **Python** (3.13, with virtual environment)
+- **APIs**: Google API Client, OAuth
+- **NLP**: NLTK (VADER), TextBlob
+- **Data Analysis**: Pandas, NumPy
+- **Visualization**: Matplotlib, Seaborn
 
-Fetch comments (replace VIDEO_ID):
-python3 fetch_comments.py VIDEO_ID 1000
+---
 
-Analyze & generate charts:
-python3 analyze_sentiment.py
+## ⚙️ Setup Instructions
 
-Repo structure
-auth_and_list.py
-fetch_comments.py
-analyze_sentiment.py
-save_token.py
-video_stats.py
-requirements.txt
-.gitignore
-README.md
+Clone the repository:
+```bash
+git clone https://github.com/almightybruce01/youtube-sentiment.git
+cd youtube-sentiment
